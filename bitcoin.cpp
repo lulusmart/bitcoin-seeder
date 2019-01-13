@@ -298,11 +298,14 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
 
 /*
 int main(void) {
-  CService ip("bitcoin.sipa.be", 9333, true);
+  CService ip("127.0.0.1", 19335, true);
   vector<CAddress> vAddr;
   vAddr.clear();
   int ban = 0;
-  bool ret = TestNode(ip, ban, vAddr);
+  string version = "0.16.3";
+  int clientV = 70003;
+  int blocks = 1000;
+  bool ret = TestNode(ip, ban, clientV, version, blocks, &vAddr);
   printf("ret=%s ban=%i vAddr.size()=%i\n", ret ? "good" : "bad", ban, (int)vAddr.size());
 }
 */
