@@ -397,8 +397,8 @@ extern "C" void* ThreadStats(void*) {
   return nullptr;
 }
 
-static const string mainnet_seeds[] = {"dnsseed.kevacoin.org", "dnsseed.kevacoin.com", ""};
-static const string testnet_seeds[] = {"testnet-seed.kevacoin.org", ""};
+static const string mainnet_seeds[] = {"seeds.kevacoin.org", "seeds.kevacoin.com", ""};
+static const string testnet_seeds[] = {"test-seed.kevacoin.org", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
