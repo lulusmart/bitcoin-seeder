@@ -296,17 +296,16 @@ bool TestNode(const CService &cip, int &ban, int &clientV, std::string &clientSV
   }
 }
 
-/*
+#if 1
 int main(void) {
-  CService ip("127.0.0.1", 19335, true);
+  CService ip("127.0.0.1", 9338, true);
   vector<CAddress> vAddr;
   vAddr.clear();
   int ban = 0;
-  string version = "0.16.3";
+  string version = "0.16.4";
   int clientV = 70003;
   int blocks = 1000;
   bool ret = TestNode(ip, ban, clientV, version, blocks, &vAddr);
-  printf("ret=%s ban=%i vAddr.size()=%i\n", ret ? "good" : "bad", ban, (int)vAddr.size());
+  printf("ret=%s ban=%i vAddr.size()=%i, start height: %d\n", ret ? "good" : "bad", ban, (int)vAddr.size(), blocks);
 }
-*/
-
+#endif
